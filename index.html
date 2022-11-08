@@ -5,43 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
 </head>
-<body>
+<body><h1>e</h1>
     <main class="root">
         <div class="body-main">
             <div class="screen"></div>
-            <div class="row1 rows">
-                <div id="ac" class="button-calculator">AC</div>
-                <div id="signals" class="button-calculator">-/+</div>
-                <div id="percent" class="button-calculator">%</div>
-                <div id="division" class="button-calculator">/</div>
+            <div class="row1 rows-standar">
+                <button id="ac" class="button-calculator">AC</button>
+                <button id="signals" class="button-calculator">+/-</button>
+                <button id="percent" class="button-calculator">%</button>
+                <button id="division" class="button-calculator">/</button>
             </div>
-            <div class="row2 rows">
-                <div id="ac" class="button-calculator">7</div>
-                <div id="signals" class="button-calculator">8</div>
-                <div id="percent" class="button-calculator">9</div>
-                <div id="division" class="button-calculator">*</div>
+            <div class="row2 rows-standar">
+                <button id="seven" class="button-calculator">7</button>
+                <button id="eight" class="button-calculator">8</button>
+                <button id="nine" class="button-calculator">9</button>
+                <button id="plus" class="button-calculator">x</button>
             </div>
-            <div class="row3 rows">
-                <div id="ac" class="button-calculator">4</div>
-                <div id="signals" class="button-calculator">5</div>
-                <div id="percent" class="button-calculator">6</div>
-                <div id="division" class="button-calculator">-</div>
+            <div class="row3 rows-standar">
+                <button id="four" class="button-calculator">4</button>
+                <button id="five" class="button-calculator">5</button>
+                <button id="six" class="button-calculator">6</button>
+                <button id="substract" class="button-calculator">-</button>
             </div>
-            <div class="row4 rows">
-                <div id="ac" class="button-calculator">1</div>
-                <div id="signals" class="button-calculator">2</div>
-                <div id="percent" class="button-calculator">3</div>
-                <div id="division" class="button-calculator">+</div>
+            <div class="row4 rows-standar">
+                <button id="one" type="button" class="button-calculator">1</button>
+                <button id="two" class="button-calculator">2</button>
+                <button id="three" class="button-calculator">3</button>
+                <button id="add" class="button-calculator">+</button>
             </div>
-            <div class="row5 rows">
-                <div id="ac" class="button-calculator">0</div>
-                <div id="signals" class="button-calculator"></div>
-                <div id="percent" class="button-calculator">,</div>
-                <div id="division" class="button-calculator">=</div>
+            <div class="row5 row-special">
+                <button id="zero">0</button>
+                <button id="coma" class="button-calculator">,</button>
+                <button id="iqual" class="button-calculator">=</button>
             </div>
         </div>
     </main>
+    <script src="index.js"></script>
 </body>
 </html>

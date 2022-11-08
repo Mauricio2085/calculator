@@ -1,3 +1,17 @@
+const one = document.querySelector('#one');
+
+let screen = [];
+one.addEventListener('click', addOne);
+
+function addOne () {
+   let readScreen = document.querySelector('.screen');
+   console.log(screen);
+   screen.push(1);
+   screen.innerText = screen;
+
+}
+
+
 function addOperator (number1, number2) {
     return number1 + number2;
 }
@@ -31,4 +45,3 @@ function calculator (number1, number2) {
     }
     
 } 
-console.log(calculator(4, 2));
