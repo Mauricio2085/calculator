@@ -11,6 +11,15 @@ const nine = document.querySelector('#nine');
 const zero = document.querySelector('#zero');
 const equal = document.querySelector('#equal');
 const coma = document.querySelector('#coma');
+const clear = document.querySelector('#ac');
+const addition = document.querySelector('#addition');
+const substract = document.querySelector('#substract');
+const plus = document.querySelector('#plus');
+const division = document.querySelector('#division');
+
+let operator1;
+let operator2;
+let result;
 
 
 one.addEventListener('click', addOne);
@@ -24,77 +33,88 @@ eihgt.addEventListener('click', addEight);
 nine.addEventListener('click', addNine);
 zero.addEventListener('click', addZero);
 coma.addEventListener('click', addComa);
-
+clear.addEventListener('click', clearScreen);
+addition.addEventListener('click', addOperation);
+substract.addEventListener('click', substractOperation);
+plus.addEventListener('click', plusOperation);
+division.addEventListener('click', divisionOparation);
 
 function addOne () {
    screen.textContent = screen.textContent + '1';
-   console.log(screen);
+
 }
 
 function addTwo () {
     screen.textContent = screen.textContent + '2';
-    console.log(screen);
+   
  }
 
  function addThree () {
     screen.textContent = screen.textContent + '3';
-    console.log(screen);
+ 
  }
 
  function addFour () {
     screen.textContent = screen.textContent + '4';
-    console.log(screen);
+
  }
 
  function addFive () {
     screen.textContent = screen.textContent + '5';
-    console.log(screen);
+
  }
 
  function addSix () {
     screen.textContent = screen.textContent + '6';
-    console.log(screen);
+
  }
 
  function addSeven () {
     screen.textContent = screen.textContent + '7';
-    console.log(screen);
+
  }
 
  function addEight () {
     screen.textContent = screen.textContent + '8';
-    console.log(screen);
+    
  }
 
  function addNine () {
     screen.textContent = screen.textContent + '9';
-    console.log(screen);
+   
  }
 
  function addZero () {
     screen.textContent = screen.textContent + '0';
-    console.log(screen);
+ 
  }
 
  function addComa () {
     screen.textContent = screen.textContent + '.';
-    console.log(screen);
+   
+ }
+
+ function clearScreen () {
+    screen.textContent = '';
+
  }
 
 
-function addOperator (number1, number2) {
-    return number1 + number2;
+function addOperation () {
+   operator1 = screen.textContent;
+   screen.textContent = '';
+    console.log(operator1);
 }
 
-function subOperator (number1, number2) {
+function substractOperation (number1, number2) {
     return number1 - number2;
 }
 
-function pluOperator (number1, number2) {
+function plusOperation (number1, number2) {
     return number1 * number2;
 }
 
-function divOperator (number1, number2) {
+function divisionOparation (number1, number2) {
     return number1 / number2;
 }
 
