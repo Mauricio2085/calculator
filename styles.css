@@ -4,7 +4,7 @@ body {
     width: 90%;
     height: 400px;
     justify-items: center;
-    background-color: black;
+    background-color: rgb(175, 172, 172);
     opacity: 90%;
 }
 
@@ -20,15 +20,15 @@ body {
 .body-main {
     position: absolute;
     top: 25px;
-    left: 222px;
+    left: 190px;
     margin-top: 100px;
     display:inline-block;
     border: 1px solid rgb(75, 73, 73);
     border-radius: 10px;
-    width: 310px;
+    width: 304px;
     height: 410px;
-    background-color: black;
-    opacity: 95%;
+    background-color: rgb(3, 3, 3);
+    opacity: 100%;
 }
 
 .screen-frame {
@@ -43,15 +43,16 @@ body {
     align-items:center;
     display: flex;
     justify-content:right;
-    margin: 5px 5px 5px 5px;
+    margin: 0;
     padding-right: 20px;
-    border: 1px solid black;
-    width: 87%;
+    border: 1px solid rgb(88, 81, 81);
+    border-radius: 10px;
+    width: 244px;
     height: 60px;
     position: absolute;
-    top: 14px;
-    left: 4px;
-    font-size: 2em;
+    top: 20px;
+    left: 19px;
+    font-size: 2.5em;
     color: #FFFFFF;
 }
 
@@ -157,6 +158,11 @@ body {
 .row-styles-numbers {
     background-color: #575552;
     color: #FFFFFF;
+}
+
+.active {
+    background-color: #D9D2D1;
+    color: #FEA600;
 }
 
 

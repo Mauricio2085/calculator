@@ -16,11 +16,16 @@ const addition = document.querySelector('#addition');
 const substract = document.querySelector('#substract');
 const plus = document.querySelector('#plus');
 const division = document.querySelector('#division');
+const operationName = ["addition", "substract", "plus", "division"];
 
 let operator1;
 let operator2;
 let result;
+let screenActive;
+let operationActive;
+let operation;
 
+function main () {
 
 one.addEventListener('click', addOne);
 two.addEventListener('click',addTwo);
@@ -38,100 +43,278 @@ addition.addEventListener('click', addOperation);
 substract.addEventListener('click', substractOperation);
 plus.addEventListener('click', plusOperation);
 division.addEventListener('click', divisionOparation);
+equal.addEventListener('click', equalFunction );
+
 
 function addOne () {
-   screen.textContent = screen.textContent + '1';
-
+   if (!operationActive) {
+      screen.textContent = screen.textContent + '1';
+      screenActive = true;
+   } else {
+      screen.textContent = '';
+      screen.textContent = screen.textContent + '1';
+      operationActive = false;
+      addition.classList.remove('active');
+      substract.classList.remove('active');
+      plus.classList.remove('active');
+      division.classList.remove('active');
+   }
 }
 
 function addTwo () {
-    screen.textContent = screen.textContent + '2';
-   
+   if (!operationActive) {
+      screen.textContent = screen.textContent + '2';
+      screenActive = true;
+   } else {
+      screen.textContent = '';
+      screen.textContent = screen.textContent + '2';
+      operationActive = false;
+      addition.classList.remove('active');
+      substract.classList.remove('active');
+      plus.classList.remove('active');
+      division.classList.remove('active');
+   }
  }
 
  function addThree () {
-    screen.textContent = screen.textContent + '3';
- 
+   if (!operationActive) {
+      screen.textContent = screen.textContent + '3';
+      screenActive = true;
+   } else {
+      screen.textContent = '';
+      screen.textContent = screen.textContent + '3';
+      operationActive = false;
+      addition.classList.remove('active');
+      substract.classList.remove('active');
+      plus.classList.remove('active');
+      division.classList.remove('active');
+   }
  }
 
  function addFour () {
-    screen.textContent = screen.textContent + '4';
-
+   if (!operationActive) {
+      screen.textContent = screen.textContent + '4';
+      screenActive = true;
+   } else {
+      screen.textContent = '';
+      screen.textContent = screen.textContent + '4';
+      operationActive = false;
+      addition.classList.remove('active');
+      substract.classList.remove('active');
+      plus.classList.remove('active');
+      division.classList.remove('active');
+   }
  }
 
  function addFive () {
-    screen.textContent = screen.textContent + '5';
-
+   if (!operationActive) {
+      screen.textContent = screen.textContent + '5';
+      screenActive = true;
+   } else {
+      screen.textContent = '';
+      screen.textContent = screen.textContent + '5';
+      operationActive = false;
+      addition.classList.remove('active');
+      substract.classList.remove('active');
+      plus.classList.remove('active');
+      division.classList.remove('active');
+   }
  }
 
  function addSix () {
-    screen.textContent = screen.textContent + '6';
-
+   if (!operationActive) {
+      screen.textContent = screen.textContent + '6';
+      screenActive = true;
+   } else {
+      screen.textContent = '';
+      screen.textContent = screen.textContent + '6';
+      operationActive = false;
+      addition.classList.remove('active');
+      substract.classList.remove('active');
+      plus.classList.remove('active');
+      division.classList.remove('active');
+   }
  }
 
  function addSeven () {
-    screen.textContent = screen.textContent + '7';
-
+   if (!operationActive) {
+      screen.textContent = screen.textContent + '7';
+      screenActive = true;
+   } else {
+      screen.textContent = '';
+      screen.textContent = screen.textContent + '7';
+      operationActive = false;
+      addition.classList.remove('active');
+      substract.classList.remove('active');
+      plus.classList.remove('active');
+      division.classList.remove('active');
+   }
  }
 
  function addEight () {
-    screen.textContent = screen.textContent + '8';
-    
+   if (!operationActive) {
+      screen.textContent = screen.textContent + '8';
+      screenActive = true;
+   } else {
+      screen.textContent = '';
+      screen.textContent = screen.textContent + '8';
+      operationActive = false;
+      addition.classList.remove('active');
+      substract.classList.remove('active');
+      plus.classList.remove('active');
+      division.classList.remove('active');
+   }
  }
 
  function addNine () {
-    screen.textContent = screen.textContent + '9';
-   
+   if (!operationActive) {
+      screen.textContent = screen.textContent + '9';
+      screenActive = true;
+   } else {
+      screen.textContent = '';
+      screen.textContent = screen.textContent + '9';
+      operationActive = false;
+      addition.classList.remove('active');
+      substract.classList.remove('active');
+      plus.classList.remove('active');
+      division.classList.remove('active');
+   }
  }
 
  function addZero () {
-    screen.textContent = screen.textContent + '0';
- 
+   if (!operationActive) {
+      screen.textContent = screen.textContent + '0';
+      screenActive = true;
+   } else {
+      screen.textContent = '';
+      screen.textContent = screen.textContent + '0';
+      operationActive = false;
+      addition.classList.remove('active');
+      substract.classList.remove('active');
+      plus.classList.remove('active');
+      division.classList.remove('active');
+   }
  }
 
  function addComa () {
-    screen.textContent = screen.textContent + '.';
-   
+   if (!operationActive) {
+      screen.textContent = screen.textContent + '1,';
+      screenActive = true;
+   } else {
+      screen.textContent = '';
+      screen.textContent = screen.textContent + ',';
+      operationActive = false;
+      addition.classList.remove('active');
+      substract.classList.remove('active');
+      plus.classList.remove('active');
+      division.classList.remove('active');
+   }
  }
 
  function clearScreen () {
     screen.textContent = '';
+    operator1 = '';
+    operator2 = '';
+    screenActive = false;
+    operationActive = false;
+    addition.classList.remove('active');
+    substract.classList.remove('active');
+    plus.classList.remove('active');
+    division.classList.remove('active');
 
  }
 
+ function equalFunction () {
+   setTimeout(() => {
+      equal.classList.remove('active');
+   }, 100); 
+   operator2 = screen.textContent;
+   equal.classList.add('active');
+   calculator ();
+ }
 
-function addOperation () {
+ function addOperation () {
    operator1 = screen.textContent;
-   screen.textContent = '';
-    console.log(operator1);
+   operation = operationName[0];
+   operationActive = true;
+   addition.classList.add('active');
+   substract.classList.remove('active');
+   plus.classList.remove('active');
+   division.classList.remove('active');
+   console.log(operation)
+      
 }
 
-function substractOperation (number1, number2) {
-    return number1 - number2;
+function substractOperation () {
+   operator1 = screen.textContent;
+   operation = operationName[1];
+   operationActive = true;
+   substract.classList.add('active')
+   addition.classList.remove('active');
+   plus.classList.remove('active');
+   division.classList.remove('active');
+   console.log(operation)
 }
 
-function plusOperation (number1, number2) {
-    return number1 * number2;
+function plusOperation () {
+   operator1 = screen.textContent;
+   operation = operationName[2];
+   operationActive = true;
+   substract.classList.add('active')
+   addition.classList.remove('active');
+   plus.classList.remove('active');
+   division.classList.remove('active');
+   console.log(operation)
 }
 
 function divisionOparation (number1, number2) {
-    return number1 / number2;
+   operator1 = screen.textContent;
+   operation = operationName[3];
+   operationActive = true;
+   substract.classList.add('active')
+   addition.classList.remove('active');
+   plus.classList.remove('active');
+   division.classList.remove('active');
+   console.log(operation)
 }
 
 
-function calculator (number1, number2) {
-    let x = 4;
-    if (x == 1) {
-        return addOperator(number1, number2);
+function calculator () {
+
+   if (operation == 'addition') {
+         let operatorNumber1 = parseInt(operator1, '10');
+         let operatorNumber2 = parseInt(operator2, '10');
+         result = operatorNumber1 + operatorNumber2;
+         screen.textContent = result;
+         screenActive = false;
+         operator1 = 0;
+      return console.log(result);
+    } if (operation == 'substract') {
+         let operatorNumber1 = parseInt(operator1, '10');
+         let operatorNumber2 = parseInt(operator2, '10');
+         result = operatorNumber1 - operatorNumber2;
+         screen.textContent = result;
+         screenActive = false;
+         operator1 = 0;
+         return console.log(result);
+    } if (operation == 'plus') {
+      let operatorNumber1 = parseInt(operator1, '10');
+      let operatorNumber2 = parseInt(operator2, '10');
+      result = operatorNumber1 * operatorNumber2;
+      screen.textContent = result;
+      screenActive = false;
+      operator1 = 0;
+      return console.log(result);
+    } if (operation == 'division') {
+      let operatorNumber1 = parseInt(operator1, '10');
+      let operatorNumber2 = parseInt(operator2, '10');
+      result = operatorNumber1 / operatorNumber2;
+      screen.textContent = result;
+      screenActive = false;
+      operator1 = 0;
+      return console.log(result);
     }
-    if (x == 2) {
-        return subOperator(number1, number2);
-    }
-    if (x == 3) {
-        return pluOperator(number1, number2);
-    }
-    if (x == 4) {
-        return divOperator(number1, number2);
-    }
-    
-} 
+   }
+}
+
+main ();
