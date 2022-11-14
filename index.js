@@ -166,6 +166,54 @@ function tecladoEvent (e) {
          division.classList.remove('active');
          } 
    }
+   if (e.key == '0') {
+      if (!operationActive) {
+      screen.textContent = screen.textContent + '0';
+      }else {
+         screen.textContent = '';
+         screen.textContent = screen.textContent + '0';
+         operationActive = false;
+         addition.classList.remove('active');
+         substract.classList.remove('active');
+         plus.classList.remove('active');
+         division.classList.remove('active');
+         } 
+   }
+   if (e.key == '+') {
+      if (!operationActive) {
+      addOperation();
+      }else {
+         return
+         } 
+   }
+   if (e.key == '-') {
+      if (!operationActive) {
+      substractOperation();
+      }else {
+         return
+         } 
+   }
+   if (e.key == '*') {
+      if (!operationActive) {
+      plusOperation();
+      }else {
+         return
+         } 
+   }
+   if (e.key == '/') {
+      if (!operationActive) {
+      divisionOparation();
+      }else {
+         return
+         } 
+   }
+   if (e.key == '=') {
+      if (!operationActive) {
+      equalFunction();
+      }else {
+         return
+         } 
+   }
 }
 
 function addOne () {
