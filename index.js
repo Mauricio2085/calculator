@@ -17,7 +17,7 @@ const substract = document.querySelector('#substract');
 const plus = document.querySelector('#plus');
 const division = document.querySelector('#division');
 const operationName = ["addition", "substract", "plus", "division"];
-
+let key;
 let operator1;
 let operator2;
 let result;
@@ -28,6 +28,7 @@ let operation;
 function main () {
 
 one.addEventListener('click', addOne);
+//key.addEventListener('keypress', touch);
 two.addEventListener('click',addTwo);
 three.addEventListener('click', addThree);
 four.addEventListener('click', addFour);
@@ -45,6 +46,175 @@ plus.addEventListener('click', plusOperation);
 division.addEventListener('click', divisionOparation);
 equal.addEventListener('click', equalFunction );
 
+document.addEventListener('keypress', tecladoEvent);
+
+function tecladoEvent (e) {
+   if (e.key == '1') {
+      if (!operationActive) {
+      screen.textContent = screen.textContent + '1';
+      }else {
+         screen.textContent = '';
+         screen.textContent = screen.textContent + '1';
+         operationActive = false;
+         addition.classList.remove('active');
+         substract.classList.remove('active');
+         plus.classList.remove('active');
+         division.classList.remove('active');
+         } 
+   }
+   if (e.key == '2') {
+      if (!operationActive) {
+      screen.textContent = screen.textContent + '2';
+      }else {
+         screen.textContent = '';
+         screen.textContent = screen.textContent + '2';
+         operationActive = false;
+         addition.classList.remove('active');
+         substract.classList.remove('active');
+         plus.classList.remove('active');
+         division.classList.remove('active');
+         } 
+   }
+   if (e.key == '3') {
+      if (!operationActive) {
+      screen.textContent = screen.textContent + '3';
+      }else {
+         screen.textContent = '';
+         screen.textContent = screen.textContent + '3';
+         operationActive = false;
+         addition.classList.remove('active');
+         substract.classList.remove('active');
+         plus.classList.remove('active');
+         division.classList.remove('active');
+         } 
+   }
+   if (e.key == '4') {
+      if (!operationActive) {
+      screen.textContent = screen.textContent + '4';
+      }else {
+         screen.textContent = '';
+         screen.textContent = screen.textContent + '4';
+         operationActive = false;
+         addition.classList.remove('active');
+         substract.classList.remove('active');
+         plus.classList.remove('active');
+         division.classList.remove('active');
+         } 
+   }
+   if (e.key == '5') {
+      if (!operationActive) {
+      screen.textContent = screen.textContent + '5';
+      }else {
+         screen.textContent = '';
+         screen.textContent = screen.textContent + '5';
+         operationActive = false;
+         addition.classList.remove('active');
+         substract.classList.remove('active');
+         plus.classList.remove('active');
+         division.classList.remove('active');
+         } 
+   }
+   if (e.key == '6') {
+      if (!operationActive) {
+      screen.textContent = screen.textContent + '6';
+      }else {
+         screen.textContent = '';
+         screen.textContent = screen.textContent + '6';
+         operationActive = false;
+         addition.classList.remove('active');
+         substract.classList.remove('active');
+         plus.classList.remove('active');
+         division.classList.remove('active');
+         } 
+   }
+   if (e.key == '7') {
+      if (!operationActive) {
+      screen.textContent = screen.textContent + '7';
+      }else {
+         screen.textContent = '';
+         screen.textContent = screen.textContent + '7';
+         operationActive = false;
+         addition.classList.remove('active');
+         substract.classList.remove('active');
+         plus.classList.remove('active');
+         division.classList.remove('active');
+         } 
+   }
+   if (e.key == '8') {
+      if (!operationActive) {
+      screen.textContent = screen.textContent + '8';
+      }else {
+         screen.textContent = '';
+         screen.textContent = screen.textContent + '8';
+         operationActive = false;
+         addition.classList.remove('active');
+         substract.classList.remove('active');
+         plus.classList.remove('active');
+         division.classList.remove('active');
+         } 
+   }
+   if (e.key == '9') {
+      if (!operationActive) {
+      screen.textContent = screen.textContent + '9';
+      }else {
+         screen.textContent = '';
+         screen.textContent = screen.textContent + '9';
+         operationActive = false;
+         addition.classList.remove('active');
+         substract.classList.remove('active');
+         plus.classList.remove('active');
+         division.classList.remove('active');
+         } 
+   }
+   if (e.key == '0') {
+      if (!operationActive) {
+      screen.textContent = screen.textContent + '0';
+      }else {
+         screen.textContent = '';
+         screen.textContent = screen.textContent + '0';
+         operationActive = false;
+         addition.classList.remove('active');
+         substract.classList.remove('active');
+         plus.classList.remove('active');
+         division.classList.remove('active');
+         } 
+   }
+   if (e.key == '+') {
+      if (!operationActive) {
+      addOperation();
+      }else {
+         return
+         } 
+   }
+   if (e.key == '-') {
+      if (!operationActive) {
+      substractOperation();
+      }else {
+         return
+         } 
+   }
+   if (e.key == '*') {
+      if (!operationActive) {
+      plusOperation();
+      }else {
+         return
+         } 
+   }
+   if (e.key == '/') {
+      if (!operationActive) {
+      divisionOparation();
+      }else {
+         return
+         } 
+   }
+   if (e.key == '=') {
+      if (!operationActive) {
+      equalFunction();
+      }else {
+         return
+         } 
+   }
+}
 
 function addOne () {
    if (!operationActive) {
@@ -260,9 +430,9 @@ function plusOperation () {
    operator1 = screen.textContent;
    operation = operationName[2];
    operationActive = true;
-   substract.classList.add('active')
+   substract.classList.remove('active')
    addition.classList.remove('active');
-   plus.classList.remove('active');
+   plus.classList.add('active');
    division.classList.remove('active');
    console.log(operation)
 }
@@ -271,10 +441,10 @@ function divisionOparation (number1, number2) {
    operator1 = screen.textContent;
    operation = operationName[3];
    operationActive = true;
-   substract.classList.add('active')
+   substract.classList.remove('active')
    addition.classList.remove('active');
    plus.classList.remove('active');
-   division.classList.remove('active');
+   division.classList.add('active');
    console.log(operation)
 }
 
