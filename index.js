@@ -17,41 +17,41 @@ const substract = document.querySelector('#substract');
 const plus = document.querySelector('#plus');
 const division = document.querySelector('#division');
 const operationName = ["addition", "substract", "plus", "division"];
-let key;
+
 let operator1;
 let operator2;
 let result;
 let screenActive;
 let operationActive;
 let operation;
+debugger;
 
-function main () {
+async function main () {
 
-one.addEventListener('click', addOne);
-//key.addEventListener('keypress', touch);
-two.addEventListener('click',addTwo);
-three.addEventListener('click', addThree);
-four.addEventListener('click', addFour);
-five.addEventListener('click', addFive);
-six.addEventListener('click', addSix);
-seven.addEventListener('click', addSeven);
-eihgt.addEventListener('click', addEight);
-nine.addEventListener('click', addNine);
-zero.addEventListener('click', addZero);
-coma.addEventListener('click', addComa);
-clear.addEventListener('click', clearScreen);
-addition.addEventListener('click', addOperation);
-substract.addEventListener('click', substractOperation);
-plus.addEventListener('click', plusOperation);
-division.addEventListener('click', divisionOparation);
-equal.addEventListener('click', equalFunction );
+one.addEventListener('mouseup', addOne);
+two.addEventListener('mouseup',addTwo);
+three.addEventListener('mouseup', addThree);
+four.addEventListener('mouseup', addFour);
+five.addEventListener('mouseup', addFive);
+six.addEventListener('mouseup', addSix);
+seven.addEventListener('mouseup', addSeven);
+eihgt.addEventListener('mouseup', addEight);
+nine.addEventListener('mouseup', addNine);
+zero.addEventListener('mouseup', addZero);
+coma.addEventListener('mouseup', addComa);
+clear.addEventListener('mouseup', clearScreen);
+addition.addEventListener('mouseup', addOperation);
+substract.addEventListener('mouseup', substractOperation);
+plus.addEventListener('mouseup', plusOperation);
+division.addEventListener('mouseup', divisionOparation);
+equal.addEventListener('mouseup', equalFunction );
 
-document.addEventListener('keypress', tecladoEvent);
+window.addEventListener('keypress', tecladoEvent);
 
 function tecladoEvent (e) {
    if (e.key == '1') {
       if (!operationActive) {
-      screen.textContent = screen.textContent + '1';
+      return screen.textContent = screen.textContent + '1';
       }else {
          screen.textContent = '';
          screen.textContent = screen.textContent + '1';
@@ -60,11 +60,13 @@ function tecladoEvent (e) {
          substract.classList.remove('active');
          plus.classList.remove('active');
          division.classList.remove('active');
+         return;
          } 
    }
    if (e.key == '2') {
       if (!operationActive) {
-      screen.textContent = screen.textContent + '2';
+         return screen.textContent = screen.textContent + '2';
+      
       }else {
          screen.textContent = '';
          screen.textContent = screen.textContent + '2';
@@ -73,11 +75,12 @@ function tecladoEvent (e) {
          substract.classList.remove('active');
          plus.classList.remove('active');
          division.classList.remove('active');
+         return;
          } 
    }
    if (e.key == '3') {
       if (!operationActive) {
-      screen.textContent = screen.textContent + '3';
+      return screen.textContent = screen.textContent + '3';
       }else {
          screen.textContent = '';
          screen.textContent = screen.textContent + '3';
@@ -86,11 +89,12 @@ function tecladoEvent (e) {
          substract.classList.remove('active');
          plus.classList.remove('active');
          division.classList.remove('active');
+         return;
          } 
    }
    if (e.key == '4') {
       if (!operationActive) {
-      screen.textContent = screen.textContent + '4';
+      return screen.textContent = screen.textContent + '4';
       }else {
          screen.textContent = '';
          screen.textContent = screen.textContent + '4';
@@ -99,11 +103,12 @@ function tecladoEvent (e) {
          substract.classList.remove('active');
          plus.classList.remove('active');
          division.classList.remove('active');
+         return;
          } 
    }
    if (e.key == '5') {
       if (!operationActive) {
-      screen.textContent = screen.textContent + '5';
+      return screen.textContent = screen.textContent + '5';
       }else {
          screen.textContent = '';
          screen.textContent = screen.textContent + '5';
@@ -112,11 +117,12 @@ function tecladoEvent (e) {
          substract.classList.remove('active');
          plus.classList.remove('active');
          division.classList.remove('active');
+         return;
          } 
    }
    if (e.key == '6') {
       if (!operationActive) {
-      screen.textContent = screen.textContent + '6';
+      return screen.textContent = screen.textContent + '6';
       }else {
          screen.textContent = '';
          screen.textContent = screen.textContent + '6';
@@ -125,11 +131,12 @@ function tecladoEvent (e) {
          substract.classList.remove('active');
          plus.classList.remove('active');
          division.classList.remove('active');
+         return;
          } 
    }
    if (e.key == '7') {
       if (!operationActive) {
-      screen.textContent = screen.textContent + '7';
+      return screen.textContent = screen.textContent + '7';
       }else {
          screen.textContent = '';
          screen.textContent = screen.textContent + '7';
@@ -138,11 +145,12 @@ function tecladoEvent (e) {
          substract.classList.remove('active');
          plus.classList.remove('active');
          division.classList.remove('active');
+         return;
          } 
    }
    if (e.key == '8') {
       if (!operationActive) {
-      screen.textContent = screen.textContent + '8';
+      return screen.textContent = screen.textContent + '8';
       }else {
          screen.textContent = '';
          screen.textContent = screen.textContent + '8';
@@ -151,11 +159,12 @@ function tecladoEvent (e) {
          substract.classList.remove('active');
          plus.classList.remove('active');
          division.classList.remove('active');
+         return;
          } 
    }
    if (e.key == '9') {
       if (!operationActive) {
-      screen.textContent = screen.textContent + '9';
+      return screen.textContent = screen.textContent + '9';
       }else {
          screen.textContent = '';
          screen.textContent = screen.textContent + '9';
@@ -164,11 +173,12 @@ function tecladoEvent (e) {
          substract.classList.remove('active');
          plus.classList.remove('active');
          division.classList.remove('active');
+         return;
          } 
    }
    if (e.key == '0') {
       if (!operationActive) {
-      screen.textContent = screen.textContent + '0';
+      return screen.textContent = screen.textContent + '0';
       }else {
          screen.textContent = '';
          screen.textContent = screen.textContent + '0';
@@ -177,49 +187,58 @@ function tecladoEvent (e) {
          substract.classList.remove('active');
          plus.classList.remove('active');
          division.classList.remove('active');
+         return;
          } 
    }
    if (e.key == '+') {
       if (!operationActive) {
-      addOperation();
+      return addOperation();
       }else {
          return
          } 
    }
    if (e.key == '-') {
       if (!operationActive) {
-      substractOperation();
+         return substractOperation();
       }else {
          return
          } 
    }
    if (e.key == '*') {
       if (!operationActive) {
-      plusOperation();
+         return plusOperation();
       }else {
          return
          } 
    }
    if (e.key == '/') {
       if (!operationActive) {
-      divisionOparation();
+         return divisionOparation();
       }else {
          return
          } 
    }
-   if (e.key == '=') {
+   if (e.key == '=' || e.key === 'Enter') {
       if (!operationActive) {
-      equalFunction();
-      }else {
+         return equalFunction();
+      } else {
          return
-         } 
+      }
    }
+   if (e.key == 'Backspace' || e.key === 'Delete') {
+      if (!operationActive) {
+         return clearScreen();
+      } else {
+         return
+      }
+   }  
 }
 
 function addOne () {
    if (!operationActive) {
       screen.textContent = screen.textContent + '1';
       screenActive = true;
+      return;
    } else {
       screen.textContent = '';
       screen.textContent = screen.textContent + '1';
@@ -228,6 +247,7 @@ function addOne () {
       substract.classList.remove('active');
       plus.classList.remove('active');
       division.classList.remove('active');
+      return;
    }
 }
 
@@ -235,6 +255,7 @@ function addTwo () {
    if (!operationActive) {
       screen.textContent = screen.textContent + '2';
       screenActive = true;
+      return;
    } else {
       screen.textContent = '';
       screen.textContent = screen.textContent + '2';
@@ -243,6 +264,7 @@ function addTwo () {
       substract.classList.remove('active');
       plus.classList.remove('active');
       division.classList.remove('active');
+      return;
    }
  }
 
@@ -250,6 +272,7 @@ function addTwo () {
    if (!operationActive) {
       screen.textContent = screen.textContent + '3';
       screenActive = true;
+      return;
    } else {
       screen.textContent = '';
       screen.textContent = screen.textContent + '3';
@@ -258,6 +281,7 @@ function addTwo () {
       substract.classList.remove('active');
       plus.classList.remove('active');
       division.classList.remove('active');
+      return;
    }
  }
 
@@ -265,6 +289,7 @@ function addTwo () {
    if (!operationActive) {
       screen.textContent = screen.textContent + '4';
       screenActive = true;
+      return;
    } else {
       screen.textContent = '';
       screen.textContent = screen.textContent + '4';
@@ -273,6 +298,7 @@ function addTwo () {
       substract.classList.remove('active');
       plus.classList.remove('active');
       division.classList.remove('active');
+      return;
    }
  }
 
@@ -280,6 +306,7 @@ function addTwo () {
    if (!operationActive) {
       screen.textContent = screen.textContent + '5';
       screenActive = true;
+      return;
    } else {
       screen.textContent = '';
       screen.textContent = screen.textContent + '5';
@@ -288,6 +315,7 @@ function addTwo () {
       substract.classList.remove('active');
       plus.classList.remove('active');
       division.classList.remove('active');
+      return;
    }
  }
 
@@ -295,6 +323,7 @@ function addTwo () {
    if (!operationActive) {
       screen.textContent = screen.textContent + '6';
       screenActive = true;
+      return;
    } else {
       screen.textContent = '';
       screen.textContent = screen.textContent + '6';
@@ -303,6 +332,7 @@ function addTwo () {
       substract.classList.remove('active');
       plus.classList.remove('active');
       division.classList.remove('active');
+      return;
    }
  }
 
@@ -310,6 +340,7 @@ function addTwo () {
    if (!operationActive) {
       screen.textContent = screen.textContent + '7';
       screenActive = true;
+      return;
    } else {
       screen.textContent = '';
       screen.textContent = screen.textContent + '7';
@@ -318,6 +349,7 @@ function addTwo () {
       substract.classList.remove('active');
       plus.classList.remove('active');
       division.classList.remove('active');
+      return;
    }
  }
 
@@ -325,6 +357,7 @@ function addTwo () {
    if (!operationActive) {
       screen.textContent = screen.textContent + '8';
       screenActive = true;
+      return;
    } else {
       screen.textContent = '';
       screen.textContent = screen.textContent + '8';
@@ -333,6 +366,7 @@ function addTwo () {
       substract.classList.remove('active');
       plus.classList.remove('active');
       division.classList.remove('active');
+      return;
    }
  }
 
@@ -340,6 +374,7 @@ function addTwo () {
    if (!operationActive) {
       screen.textContent = screen.textContent + '9';
       screenActive = true;
+      return;
    } else {
       screen.textContent = '';
       screen.textContent = screen.textContent + '9';
@@ -348,6 +383,7 @@ function addTwo () {
       substract.classList.remove('active');
       plus.classList.remove('active');
       division.classList.remove('active');
+      return;
    }
  }
 
@@ -355,6 +391,7 @@ function addTwo () {
    if (!operationActive) {
       screen.textContent = screen.textContent + '0';
       screenActive = true;
+      return;
    } else {
       screen.textContent = '';
       screen.textContent = screen.textContent + '0';
@@ -363,6 +400,7 @@ function addTwo () {
       substract.classList.remove('active');
       plus.classList.remove('active');
       division.classList.remove('active');
+      return;
    }
  }
 
@@ -370,6 +408,7 @@ function addTwo () {
    if (!operationActive) {
       screen.textContent = screen.textContent + ',';
       screenActive = true;
+      return;
    } else {
       screen.textContent = '';
       screen.textContent = screen.textContent + ',';
@@ -378,6 +417,7 @@ function addTwo () {
       substract.classList.remove('active');
       plus.classList.remove('active');
       division.classList.remove('active');
+      return;
    }
  }
 
@@ -391,7 +431,8 @@ function addTwo () {
     substract.classList.remove('active');
     plus.classList.remove('active');
     division.classList.remove('active');
-
+    equal.classList.remove('active');
+    return;
  }
 
  function equalFunction () {
@@ -400,7 +441,9 @@ function addTwo () {
    }, 100); 
    operator2 = screen.textContent;
    equal.classList.add('active');
-   calculator ();
+   operationActive = false;
+   return calculator ();
+   console.log(screen)
  }
 
  function addOperation () {
@@ -437,7 +480,7 @@ function plusOperation () {
    console.log(operation)
 }
 
-function divisionOparation (number1, number2) {
+function divisionOparation () {
    operator1 = screen.textContent;
    operation = operationName[3];
    operationActive = true;
@@ -458,6 +501,7 @@ function calculator () {
          screen.textContent = result;
          screenActive = false;
          operator1 = 0;
+         console.log(screen)
       return console.log(result);
     } if (operation == 'substract') {
          let operatorNumber1 = parseInt(operator1, '10');
