@@ -198,7 +198,7 @@ function addTwo () {
 
  function addComa () {
    if (!operationActive) {
-      screen.textContent = screen.textContent + '1,';
+      screen.textContent = screen.textContent + ',';
       screenActive = true;
    } else {
       screen.textContent = '';
